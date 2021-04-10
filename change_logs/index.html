@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+
+<script>document.getElementsByTagName("html")[0].className += " js";</script>
+
+<link rel="icon" type="image/png" href="https://cdn-ec853.web.app/img/pickaapp.png">
+
+<link id="codyframe" rel="stylesheet" href="https://cdn-ec853.web.app/css/style.css">
+<!-- browsers not supporting CSS variables -->
+<script>
+    if (!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) { var cfStyle = document.getElementById('codyframe'); if (cfStyle) { var href = cfStyle.getAttribute('href'); href = href.replace('style.css', 'style-fallback.css'); cfStyle.setAttribute('href', href); } }
+</script>
+
+<body>
+    <main>
+        <div class="container max-width-sm margin-y-lg">
+            <h1>Version</h1>
+            <input type="text" placeholder="Version Name" id="vn">
+
+            <h1>New Features</h1>
+            <ol id="featureList" style="list-style:circle">
+
+            </ol>
+            <input type="text" placeholder="New Feature" id="nf"> <button id="addNf">Add</button>
+
+            <h1>Fixes</h1>
+            <div id="fixesList">
+
+            </div>
+            <input type="text" placeholder="New Feature" id="fx"> <button id="addFix">Add</button>
+
+            <h1>Deprecated Features</h1>
+            <div id="dfList">
+
+            </div>
+            <input type="text" placeholder="New Feature" id="df"> <button id="addDf">Add</button>
+
+            <input type="password" id="x">
+            <button class="width-100%" id="addVersion">Add</button>
+        </div>
+    </main>
+
+
+    <script src="https://cdn-ec853.web.app/js/scripts.min.js"></script>
+    <script src="https://cdn-ec853.web.app/js/ui.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-functions.js"></script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

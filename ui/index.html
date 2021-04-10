@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../../cdn/img/pickaapp.png">
+<meta name="theme-color" content="#ffffff">
+<script>document.getElementsByTagName("html")[0].className += " js";</script>
+
+<script>
+    function addCss(path) {
+        var link = document.createElement('link');
+        link.type = 'text/css';
+        link.rel = 'stylesheet';
+        link.href = path;
+        document.head.appendChild(link);
+    }
+    if ('CSS' in window && CSS.supports('color', 'var(--color-var)')) {
+        addCss('../../cdn/css/style.css');
+    } else {
+        addCss('../../cdn/css/style-fallback.css');
+    }
+</script>
+<noscript>
+    <link rel="stylesheet" href="../../cdn/css/style-fallback.css">
+</noscript>
+
+<title>Pick a App</title>
+
+<style>
+    .h-100 {
+        height: 100%;
+    }
+</style>
+
+<body>
+    <section class="thank-you padding-y-xxl">
+        <div class="container max-width-adaptive-sm text-center">
+          <svg class="thank-you__icon margin-bottom-sm" viewBox="0 0 80 80" aria-hidden="true"><g class="thank-you__icon-group"><circle fill="var(--color-success)" cx="40" cy="40" r="40"/><polyline points="21 41 33 53 59 27" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/></g></svg>
+      
+          <div class="text-component">
+            <h1 class="text-xxxl">Order Confirmed</h1>
+              <p class="color-contrast-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi aliquid qui et saepe omnis ipsum amet quasi accusamus.</p>
+      
+              <p class="flex flex-wrap flex-column flex-row@xs gap-xxs justify-center">
+                <a class="btn btn--subtle" href="#0">Continue Shopping</a>
+                <a class="btn btn--primary" href="#0">Manage Order</a>
+              </p>
+          </div>
+        </div>
+      </section>
+
+    <header class="f-header position-relative js-f-header">
+        <div class="f-header__mobile-content container max-width-lg">
+            <a href="#0" class="f-header__logo">
+                <svg width="104" height="30" viewBox="0 0 104 30">
+                    <title>Go to homepage</title>
+                    <path
+                        d="M37.54 24.08V3.72h4.92v16.37h8.47v4zM60.47 24.37a7.82 7.82 0 01-5.73-2.25 8.36 8.36 0 01-2-5.62 8.32 8.32 0 012.08-5.71 8 8 0 015.64-2.18 8.07 8.07 0 015.68 2.2 8.49 8.49 0 012 5.69 8.63 8.63 0 01-1.78 5.38 7.6 7.6 0 01-5.89 2.49zm0-3.67c2.42 0 2.73-3 2.73-4.23s-.31-4.26-2.73-4.26-2.79 3-2.79 4.26.32 4.23 2.82 4.23zM95.49 24.37a7.82 7.82 0 01-5.73-2.25 8.36 8.36 0 01-2-5.62 8.32 8.32 0 012.08-5.71 8.4 8.4 0 0111.31 0 8.43 8.43 0 012 5.69 8.6 8.6 0 01-1.77 5.38 7.6 7.6 0 01-5.89 2.51zm0-3.67c2.42 0 2.73-3 2.73-4.23s-.31-4.26-2.73-4.26-2.8 3-2.8 4.26.31 4.23 2.83 4.23zM77.66 30c-5.74 0-7-3.25-7.23-4.52l4.6-.26c.41.91 1.17 1.41 2.76 1.41a2.45 2.45 0 002.82-2.53v-2.68a7 7 0 01-1.7 1.75 6.12 6.12 0 01-5.85-.08c-2.41-1.37-3-4.25-3-6.66 0-.89.12-3.67 1.45-5.42a5.67 5.67 0 014.64-2.4c1.2 0 3 .25 4.46 2.82V8.81h4.85v15.33a5.2 5.2 0 01-2.12 4.32A9.92 9.92 0 0177.66 30zm.15-9.66c2.53 0 2.81-2.69 2.81-3.91s-.31-4-2.81-4-2.81 2.8-2.81 4 .27 3.91 2.81 3.91zM55.56 3.72h9.81v2.41h-9.81z"
+                        fill="var(--color-contrast-higher)" />
+                    <circle cx="15" cy="15" r="15" fill="var(--color-primary)" />
+                </svg>
+            </a>
+
+            <button class="reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus"
+                aria-label="Toggle menu">
+                <i class="anim-menu-btn__icon anim-menu-btn__icon--close" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="f-header__nav" role="navigation">
+            <div class="f-header__nav-grid justify-between@md container max-width-lg">
+                <ul class="f-header__list flex-grow flex-basis-0">
+                    <li class="f-header__item"><a href="#0" class="f-header__link" aria-current="page">Home</a></li>
+                    <li class="f-header__item">
+                        <a href="#0" class="f-header__link">
+                            <span>Solutions</span>
+                            <svg class="f-header__dropdown-icon icon" aria-hidden="true" viewBox="0 0 12 12">
+                                <path d="M6,9l4-5H2Z" /></svg>
+                        </a>
+
+                        <ul class="f-header__dropdown">
+s                            <li><a href="#0" class="f-header__dropdown-link">Sub Nav Item One</a></li>
+                            <li><a href="#0" class="f-header__dropdown-link">Sub Nav Item Two</a></li>
+                            <li><a href="#0" class="f-header__dropdown-link">Sub Nav Item Three</a></li>
+                            <li><a href="#0" class="f-header__dropdown-link">Sub Nav Item Four</a></li>
+                            <li><a href="#0" class="f-header__dropdown-link">Sub Nav Item Five</a></li>
+                        </ul>
+                    </li>
+                    <li class="f-header__item"><a href="#0" class="f-header__link">Contact</a></li>
+                </ul>
+
+                <div class="f-header__nav-logo-wrapper flex-grow flex-basis-0 justify-center@md">
+                    <a href="#0" class="f-header__logo">
+                        <img src="../../cdn/img/pickaapp.png" width="100" alt="">
+                        <!-- <svg width="104" height="30" viewBox="0 0 104 30"><title>Go to homepage</title><path d="M37.54 24.08V3.72h4.92v16.37h8.47v4zM60.47 24.37a7.82 7.82 0 01-5.73-2.25 8.36 8.36 0 01-2-5.62 8.32 8.32 0 012.08-5.71 8 8 0 015.64-2.18 8.07 8.07 0 015.68 2.2 8.49 8.49 0 012 5.69 8.63 8.63 0 01-1.78 5.38 7.6 7.6 0 01-5.89 2.49zm0-3.67c2.42 0 2.73-3 2.73-4.23s-.31-4.26-2.73-4.26-2.79 3-2.79 4.26.32 4.23 2.82 4.23zM95.49 24.37a7.82 7.82 0 01-5.73-2.25 8.36 8.36 0 01-2-5.62 8.32 8.32 0 012.08-5.71 8.4 8.4 0 0111.31 0 8.43 8.43 0 012 5.69 8.6 8.6 0 01-1.77 5.38 7.6 7.6 0 01-5.89 2.51zm0-3.67c2.42 0 2.73-3 2.73-4.23s-.31-4.26-2.73-4.26-2.8 3-2.8 4.26.31 4.23 2.83 4.23zM77.66 30c-5.74 0-7-3.25-7.23-4.52l4.6-.26c.41.91 1.17 1.41 2.76 1.41a2.45 2.45 0 002.82-2.53v-2.68a7 7 0 01-1.7 1.75 6.12 6.12 0 01-5.85-.08c-2.41-1.37-3-4.25-3-6.66 0-.89.12-3.67 1.45-5.42a5.67 5.67 0 014.64-2.4c1.2 0 3 .25 4.46 2.82V8.81h4.85v15.33a5.2 5.2 0 01-2.12 4.32A9.92 9.92 0 0177.66 30zm.15-9.66c2.53 0 2.81-2.69 2.81-3.91s-.31-4-2.81-4-2.81 2.8-2.81 4 .27 3.91 2.81 3.91zM55.56 3.72h9.81v2.41h-9.81z" fill="var(--color-contrast-higher)"/><circle cx="15" cy="15" r="15" fill="var(--color-primary)"/></svg> -->
+                    </a>
+                </div>
+
+                <ul class="f-header__list flex-grow flex-basis-0 justify-end@md">
+                    <li class="f-header__item"><a href="#0" class="f-header__link">Login</a></li>
+                    <li class="f-header__item"><a href="#0" class="f-header__btn btn btn--primary">Button</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-width-lg margin-auto">
+
+        <fieldset class="app-fieldset padding-md" id="ui_station">
+            <legend>
+                blah
+            </legend>
+
+            <div class="">
+                <label class="form-label margin-bottom-xxxs" for="selectThis">Select platform:</label>
+
+                <div class="select">
+                    <select class="select__input form-control" name="platform" id="platform_select"
+                        onchange="platform(this.value)">
+                        <option>__</option>
+                        <option value="web">Web</option>
+                        <option value="android">Android</option>
+                        <!-- <optgroup label="Group 1">
+                        <option value="0">Select option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                    </optgroup>
+
+                    <optgroup label="Group 2">
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                    </optgroup> -->
+                    </select>
+
+                    <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16">
+                        <g stroke-width="1" stroke="currentColor">
+                            <polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-miterlimit="10" points="15.5,4.5 8,12 0.5,4.5 "></polyline>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="app-hide" id="web">
+                <label class="form-label margin-bottom-xxxs" for="selectThis">Select range:</label>
+
+                <div class="select">
+                    <select class="select__input form-control" name="platform" id="platform_select"
+                        onchange="platform(this.value)">
+                        <option>__</option>
+                        <option value="main">Main</option>
+                        <option value="appSpecific">App Specific</option>
+                        <!-- <optgroup label="Group 1">
+                        <option value="0">Select option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                    </optgroup>
+
+                    <optgroup label="Group 2">
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                    </optgroup> -->
+                    </select>
+
+                    <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16">
+                        <g stroke-width="1" stroke="currentColor">
+                            <polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-miterlimit="10" points="15.5,4.5 8,12 0.5,4.5 "></polyline>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+        </fieldset>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+    <script src="../../cdn/js/scripts.min.js"></script>
+    <script src="https://cdn.pickaapp.com/js/ui.js"></script>
+    <script src="https://cdn.pickaapp.com/js/config.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

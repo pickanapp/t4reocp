@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../cdn/img/pickaapp.png">
+<meta name="theme-color" content="#ffffff">
+<script>document.getElementsByTagName("html")[0].className += " js";</script>
+
+<script>
+    function addCss(path) {
+        var link = document.createElement('link');
+        link.type = 'text/css';
+        link.rel = 'stylesheet';
+        link.href = path;
+        document.head.appendChild(link);
+    }
+    if ('CSS' in window && CSS.supports('color', 'var(--color-var)')) {
+        addCss('../cdn/css/style.css');
+    } else {
+        addCss('../cdn/css/style-fallback.css');
+    }
+</script>
+<noscript>
+    <link rel="stylesheet" href="../cdn/css/style-fallback.css">
+</noscript>
+
+<title>Pick a App</title>
+
+<style>
+    .h-100 {
+        height: 100%;
+    }
+</style>
+
+<body class="h-100 app-display-container">
+    <div id="ui_ops" class="app-hide">
+        <ul>
+            <li><a href="balance/">Balances</a></li>
+            <li><a href="ui/">UI</a></li>
+            <li><a href="change_logs/">Change Logs</a></li>
+            <li><a href="apps/">Apps</a></li>
+        </ul>
+    </div>
+
+    <div id="ui_login" class="app-display-middle">
+        <form id="login">
+            <div>
+                <input name="txt_email" type="text" placeholder="Email">
+            </div>
+            <div>
+                <input name="txt_password" type="password" placeholder="Password">
+            </div>
+        </form>
+        <div>
+            <button class="width-100%" onclick="login(g('login'))">Sign in</button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+    <script src="https://cdn-ec853.web.app/js/scripts.min.js"></script>
+    <script src="https://cdn-ec853.web.app/js/ui.js"></script>
+    <script src="https://cdn-ec853.web.app/js/config.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

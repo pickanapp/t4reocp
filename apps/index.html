@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps</title>
+    <link rel="stylesheet" href="https://cdn-ec853.web.app/css/style.css">
+    <link rel="stylesheet" href="https://cdn-ec853.web.app/css/custom.css">
+</head>
+
+<body class="app-display-container">
+    <section class="container">
+        <div class="grid" id="categories">
+            <!-- <div class="">
+                
+            </div>
+
+            <div class="">
+                <h1>Food</h1>
+
+                <ul>
+                    <li>Buya Bamba Potatoes</li>
+                    <li>Buya Bamba Potatoes</li>
+                    <li>Buya Bamba Potatoes</li>
+                    <li>Buya Bamba Potatoes</li>
+                    <li>Buya Bamba Potatoes</li>
+                    <li>Buya Bamba Potatoes</li>
+                </ul>
+            </div>
+            <div class="">
+                <h1>Food</h1>
+
+                <ul>
+                    <li>Buya Bamba Potatoes</li>
+                    <li>Buya Bamba Potatoes</li>
+                    <li>Buya Bamba Potatoes</li>
+                    <li>Buya Bamba Potatoes</li>
+                    <li>Buya Bamba Potatoes</li>
+                    <li>Buya Bamba Potatoes</li>
+                </ul>
+            </div>
+            <div class="">
+                <h1>Food</h1>
+
+                <ul>
+                    <li>Buya Bamba Potatoes</li>
+                    <li>Buya Bamba Potatoes</li>
+                    <li>Buya Bamba Potatoes</li>
+                    <li>Buya Bamba Potatoes</li>
+                    <li>Buya Bamba Potatoes</li>
+                    <li>Buya Bamba Potatoes</li>
+                </ul>
+            </div> -->
+        </div>
+    </section>
+
+    <div class="app-display-bottomright padding-x-lg padding-y-lg">
+        <button class="btn btn--primary" aria-controls="modal-select">Select option</button>
+    </div>
+
+    <div class="modal modal--select modal--animate-scale flex flex-center padding-md js-modal" id="modal-select">
+        <div class="modal__content max-width-xs max-height-100% overflow-auto padding-md text-center" role="alertdialog"
+            aria-labelledby="modal-select-title" aria-describedby="">
+            <p class="color-contrast-medium margin-bottom-xs" id="modal-select-title">Select an option:</p>
+            <ul class="full-screen-select flex flex-column gap-xxs js-full-screen-select" role="listbox" id="apps"></ul>
+        </div>
+
+        <button class="reset modal__close-btn modal__close-btn--outer  js-modal__close js-tab-focus">
+            <svg class="icon icon--sm" viewBox="0 0 24 24">
+                <title>Close modal window</title>
+                <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="3" y1="3" x2="21" y2="21" />
+                    <line x1="21" y1="3" x2="3" y2="21" />
+                </g>
+            </svg>
+        </button>
+    </div>
+
+    <div class="modal modal--select modal--animate-scale flex flex-center padding-md js-modal">
+        <div class="modal__content max-width-xs max-height-100% overflow-auto padding-md text-center" role="alertdialog"
+            aria-labelledby="modal-select-title" aria-describedby="">
+            <p class="color-contrast-medium margin-bottom-xs" id="modal-select-title">Select an option:</p>
+
+            <div class="margin-y-md">
+                <input type="text" class="form-control width-100%" id="textProspect" placeholder="Company Name">
+                <input type="text" class="form-control width-100%" id="l" placeholder="Location">
+                <input type="text" class="form-control width-100%" id="c" placeholder="Contact">
+            </div>
+
+            <button class="btn btn-lg btn--primary width-100% " id="btnAdd">ADD</button>
+        </div>
+
+        <button class="reset modal__close-btn modal__close-btn--outer  js-modal__close js-tab-focus">
+            <svg class="icon icon--sm" viewBox="0 0 24 24">
+                <title>Close modal window</title>
+                <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="3" y1="3" x2="21" y2="21" />
+                    <line x1="21" y1="3" x2="3" y2="21" />
+                </g>
+            </svg>
+        </button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <script src="https://cdn-ec853.web.app/js/config.js"></script>
+    <script src="https://cdn-ec853.web.app/js/scripts.min.js"></script>
+    <script src="https://cdn-ec853.web.app/js/ui.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

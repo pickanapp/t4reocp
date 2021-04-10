@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../../cdn/img/pickaapp.png">
+<meta name="theme-color" content="#ffffff">
+<script>document.getElementsByTagName("html")[0].className += " js";</script>
+
+<script>
+    function addCss(path) {
+        var link = document.createElement('link');
+        link.type = 'text/css';
+        link.rel = 'stylesheet';
+        link.href = path;
+        document.head.appendChild(link);
+    }
+    if ('CSS' in window && CSS.supports('color', 'var(--color-var)')) {
+        addCss('../../cdn/css/style.css');
+    } else {
+        addCss('../../cdn/css/style-fallback.css');
+    }
+</script>
+<noscript>
+    <link rel="stylesheet" href="../../cdn/css/style-fallback.css">
+</noscript>
+
+<title>Pick a App</title>
+
+<style>
+    .h-100 {
+        height: 100%;
+    }
+</style>
+
+<body class="h-100 app-display-container">
+
+    <div class="margin-x-auto max-width-sm">
+        <input id="txt_reference" type="text" placeholder="Reference">
+        <input id="txt_amount" type="number" placeholder="Amount">
+        <button onclick="getReference(g('txt_reference').value, g('txt_amount').value)">Check</button>
+    </div>
+
+    <div class="modal modal--animate-scale flex flex-center bg-contrast-higher bg-opacity-90% padding-md js-modal"
+        id="modal-name-1">
+        <div class="modal__content width-100% max-width-xs bg radius-md shadow-md" role="alertdialog"
+            aria-labelledby="modal-title-1" aria-describedby="modal-description-1">
+            <header class="bg-contrast-lower padding-y-sm padding-x-md flex items-center justify-between">
+                <h4 class="text-truncate" id="modal-title-1"></h4>
+                <button class="reset modal__close-btn modal__close-btn--inner hide@md js-modal__close js-tab-focus">
+                    <svg class="icon" viewBox="0 0 20 20">
+                        <title>Close modal window</title>
+                        <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2">
+                            <line x1="3" y1="3" x2="17" y2="17" />
+                            <line x1="17" y1="3" x2="3" y2="17" />
+                        </g>
+                    </svg>
+                </button>
+            </header>
+
+            <div class="padding-y-sm padding-x-md">
+                <input type="number" id="amount_input" placeholder="Amount">
+            <input type="password" placeholder="*****" id="PAAPIN">
+            </div>
+
+            <footer class="padding-md">
+                <div class="flex justify-end gap-xs">
+                    <button class="btn btn--subtle js-modal__close">Cancel</button>
+                    <button class="btn btn--primary" id="evaluate_btn">Evaluate</button>
+                </div>
+            </footer>
+        </div>
+
+        <button class="reset modal__close-btn modal__close-btn--outer display@md js-modal__close js-tab-focus">
+            <svg class="icon icon--sm" viewBox="0 0 24 24">
+                <title>Close modal window</title>
+                <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2">
+                    <line x1="3" y1="3" x2="21" y2="21" />
+                    <line x1="21" y1="3" x2="3" y2="21" />
+                </g>
+            </svg>
+        </button>
+    </div>
+
+    <div class="app-hide notice js-notice app-animate-bottom" id="snack_bar">
+        <div class="container max-width-lg">
+            <div class="notice__banner flex justify-between items-start items-center@md">
+                <div class="text-component">
+                    <p class="text-sm" id="snack_bar_message"></p>
+                </div>
+
+                <button class="reset notice__close-btn margin-left-sm js-notice__hide-control">
+                    <svg class="icon" viewBox="0 0 16 16">
+                        <title>Close panel</title>
+                        <g stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-miterlimit="10">
+                            <line x1="13.5" y1="2.5" x2="2.5" y2="13.5"></line>
+                            <line x1="2.5" y1="2.5" x2="13.5" y2="13.5"></line>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-functions.js"></script>
+    <script src="https://cdn.pickaapp.com/js/scripts.min.js"></script>
+    <script src="../../cdn/js/ui.js"></script>
+    <script src="https://cdn.pickaapp.com/js/config.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
